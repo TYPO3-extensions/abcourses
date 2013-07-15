@@ -1,0 +1,25 @@
+NEXT RELEASE
+---
+- new screenshots for the documentation
+- refactoring the csh files
+- integrate a new marker which renders a link "back" to switch between different view types
+---
+
+And than
+---
+- ... in Kommentaren entfernen
+
+- deutsche Bezeichner im handbuch entfernen
+
+- Post Daten an Success Seite weiterreichen. Macht das Sinn?
+
+- Suchfunktionen und Zusammenspiel mit indexed_search und macinasearchbox prüfen
+
+- Detailsuche fertigstellen
+
+- template korrigieren
+  Category > categories  und nicht categorie > categories! Niedrig priorisiert. Auch wegen Abwärstkompatibilität.
+
+- Neue Referenz Seiten in der Doku ergänzen
+
+- deleted und hidden field für categories und types integrieren...

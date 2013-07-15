@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallangExt>
+    <data type="array">
+        <languageKey index="de" type="array">
+            <label index="general_settings">Generelle Einstellungen</label>
+            <label index="pages">Seiten bzw SysFolder mit Seminardaten</label>
+            <label index="none">Keine</label>
+            <label index="level_1">1 Ebene</label>
+            <label index="level_2">2 Ebenen</label>
+            <label index="level_3">3 Ebenen</label>
+            <label index="special_view_settings">Spezielle Einstellungen</label>
+            <label index="template">Template zum rendern dieses PlugIn</label>
+            <label index="force_category_list">Kategorie-Übersicht zwingen nur Kategorien anzuzeigen?</label>
+            <label index="subscription_event">Termin zur direkten Anmeldung.</label>
+            <label index="force_last-minute_events">In der Ansicht Ausgewählte-Termine automatisch LastMinute Termine darstellen?</label>
+            <label index="last-minute_events_amount">Anzahl der LastMinute Termine die angezeigt werden sollen. Lassen Sie dies leer oder setzten Sie den Wer auf 0, werden alle LastMinute Termine angezeigt.</label>
+            <label index="special_view_selected_events">Manuelle gewählte Termine für die Ansicht AusgewählteTermine</label>
+            <label index="special_view_selected_categories">Kategorien die in der Ansicht Ausgewählte-Kategorien angezeigt werden sollen.</label>
+            <label index="tab_config_info">Konfig Info</label>
+            <label index="show_config_info">Konfigurationshilfe zeigen?</label>
+        </languageKey>
+    </data>
+</T3locallangExt>

@@ -1,0 +1,179 @@
+(add new changes on top of this file)
+
+14-08-18 Stefan Precht <sprecht@gmx.de>
+- Added seodesc attribute to a course.
+- now this is used for rendering the meta description
+- removed the deprecated lmShort and lmOverview view
+- Using the Mail API now
+  http://docs.typo3.org/typo3cms/CoreApiReference/6.2/ApiOverview/Mail/Index.html
+- Deactivated the rendering of description and title per default. You need to explicitly activate it per TS.
+- changed showeventsago TS setting for coursedetails to showEventsAgo
+
+
+14-08-17 Stefan Precht <sprecht@gmx.de>
+- Added keywords attribute to a course.
+- Added the possibility to render the keywords from a course.
+- Changed supported T3 Version to > 6.0 only.
+- Changed abcourses version to 1.7.0
+
+14-08-10 Stefan Precht <sprecht@gmx.de>
+- Added the possibility to render the description from a course.
+- introduced static/setup_metadata.txt
+
+14-06-18 Stefan Precht <sprecht@gmx.de>
+Many changes happened ...
+- Added class.tx_abcourses_metadate with function titleTagFunction. You can use this to overwrite a pages title with the
+  title of a shown seminar (only in course- or event-detailview). To use this, add the titleTagFunction within your TS
+  like this:
+    config.titleTagFunction = tx_abcourses_metadata->titleTagFunction
+- Code refactorings
+- removed the 'pages' and 'recursive' restriction when loading a course by its uid or by the uid of a courses event
+
+13-03-12 Stefan Precht <sprecht@gmx.de>
+- Removed API deprecations for using abcourses with TYPO3 V4.7
+
+10-02-25 V1.6.1 Stefan Precht <sprecht@gmx.de>
+- Fixed a bug within the Event class, which causes Participants not to be displayed as they should.
+
+[...Sorry, I did a mistake during publishing, so the version number was raised up to 1.6.0 ...]
+
+09-12-02 V1.5.0 Stefan Precht <sprecht@gmx.de>
+- Added a new subscriptions feature. Now you can configure your abcourses to track each subscription as tt_address record. Read more about this in the documentation.
+- If a event is not subscribable, the label "subscribelabel_unavailable" will be rendered instead of the normal link text.
+
+09-09-24 V1.4.3 Stefan Precht <sprecht@gmx.de>
+I changed the conditionsref part within the coursedetail view to the oop approach. Regarding to this
+there are some small changes within the template structure of that view as well as in the TS configuration
+for this view. Please take a look into the default template to get an example.
+
+09-09-28 V1.4.3 Stefan Precht <sprecht@gmx.de>
+Unfortunately, I'd overwritten the ###CONDITIONS### marker with the previous update. So it was not possible anymore to show the regarding text, entered in the backend.
+I renamed this marker to ###CONDITIONSTEXT###. Now it should work again...
+
+09-09-18 V1.4.3 Stefan Precht <sprecht@gmx.de>
+- Fixed a bug within the course detail view. The template snippets regarding the "###CONDITIONSREF###" templates within the default template
+was located outside of the "###EVENT###" subpart, but the rendering order expected it within that subpart ...
+
+09-08-10 V1.4.3 Stefan Precht <sprecht@gmx.de>
+- Fixed a bug within the category overview with next events which causes the overview to ignore the settings to configure the number of listed events.
+
+
+08-09-12 V1.4.2 Stefan Precht <sprecht@gmx.de>
+- Fixed a bug within the calculation of the accommodation period. I had forgotten to take care of possibly clock change.
+
+08-09-12 V1.4.1 Stefan Precht <sprecht@gmx.de>
+- just removed one duplicated folder
+
+08-09-12 V1.4.0 Stefan Precht <sprecht@gmx.de>
+- complete refactoring of the date rendering. ATTENTION! See the documentation about this too!
+- Removed the dependencie to kj_becalendar because of css problems with that extension in a current backend (V4.2.1)
+- Beacause of the count of changes, this should not be only a bugfix release. So this will become Version 1.4
+
+08-08-29 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- changed the implementation of the hook in startSubscription($MA,$MACourse,$MAEvent,$MATrainer,$MALocation); thx to Tapio Markula who encoutered this bug.
+- added two hooks. displayDetail-Hook and fillAllLabels-hook. See also: Within the "f." manual.
+
+08-08-27 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- added a flag useUTC in TS. See more about this in the documentation
+
+08-08-22 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Added a utils class
+- Added methods for time formatting to the utils class
+- replaced strftime with AbcoursesUtil::getFormattedTime
+- Add missing language labels
+  tx_abcourses_course.teachingaids
+  tx_abcourses_teachingaids
+  tx_abcourses_teachingaids.name
+- Changed the structure of the flexform and added language labels. Thxs to Stefan Gallinki and Tapio Markula.
+
+08-08-15 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Small changes of the default template
+- Fixed some bugs with the display of the enddate and time of an event.
+- Fixed a bug within the newly added mechanism to add Labels without programming.
+- Different code approvements
+- Changed the printme() of Events. No the Event loads intantiate his location automatically if it should be printed.
+
+08-07-24 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Added Plugin Viewtype specialcatoverview, to display selected categories and their courses.
+
+08-07-24 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Added NOCOURSES Block within the CouresesInCat Template
+
+08-07-13 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Changed the printme() method of a category. Now there is an ODDEVEN marker within the COURSES Template.
+
+08-05-30 V1.3.3 Stefan Precht <sprecht@gmx.de>
+- Added the possibilty to extend the global template markers for the views of this extension. More information in the TS documentation for "addOnLabels".
+- added an localization lookUp within the rendering of the subscription emails. This point got a paragraph in the documentation too.
+- Added documentation for changing the subscription form
+
+(!)  changed the following TS markers to camel case: sendto, mailfrom, mailfromname, maillabels, usedlabels
+  The lowercase version still works but is deprecated! I will remove the lowercase support in one the next versions.
+
+08-04-20 V1.3.2 Stefan Precht <sprecht@gmx.de>
+- Changed the query in cAbcoursesDal->coursesWithNextEvents. The previous Version used an alias for one field which causes an query error on some MySQL installations
+- Current version is now 1.3.2
+
+08-04-17 V1.3.1 Stefan Precht <sprecht@gmx.de>
+- Changed the query in cAbcoursesDal->coursesWithNextEvents. The previous Version used an alias for one field which causes an query error on some MySQL installations
+- Changed the inline docu for events
+- Changed the inline docu for courses
+- Made some changes in locallang_db.xml
+- Added some configration for time formats in the TS template.
+- Added some markers for events. Now also available: ###DATESTART###, ###DATEEND###, ###TIMEDATESTART###, ###TIMEDATEEND###
+- Added some ts wrap support for the new template markers
+- added the new marker fields to the default template
+
+08-03-21 V1.3.1 Stefan Precht <sprecht@gmx.de>
+- Corrected the filepath of the locallang-file from locallang.php to ...xml. I've forgotten this setting in the wizicon file while the
+conversion of the locallize files.
+- Small changes in the categories class file to avoid php errors if no categories are available.
+- Small changes in the locations class file.
+
+
+08-01-24 V1.3.0 Stefan Precht <sprecht@gmx.de>
+- pi1: Extend the selectedEvents function so both last minute views gets deprecated.
+- class.Location: Extend this class for a printme function
+- dal: Extend the access layer to support the extended selectedEvents function.
+- loader: Extend the access layer to support the extended selectedEvents function.
+- template: due to the changes as made for the selectedEvents function the template for this view changes to
+- default ts: extend the configuration for the selectedEvents function and deleted the default config for the deprecated last minute views
+
+08-01-23 V1.2.2 Stefan Precht <sprecht@gmx.de>
+- change the locallang.php files to xml format
+- JavaDoc documentation for all files in the classes folder.
+- Updated the ext_php_api.dat file
+
+08-01-22 V1.2.1 Stefan Precht <sprecht@gmx.de>
+- Inline documentation of the proxy class (JavaDoc format)
+- refactoring of pi1->displayResultlist and the corresponding templates
+- merge some functions in the cAbcoursesBase class for remove redundancies...
+
+[...]
+many changes in between... if you update to a 1.x.x version you have to modify your plugin configuration and some of your templates...
+[...]
+
+07-04-23 V0.10.0 Stefan Precht  <sprecht@gmx.de>
+- Extended the object model, Class cCourse and others
+- Added a block with "Similar Courses" in Course Detail View.
+  Templatemarker ###SIMILAREVENTS###, ###SIMILAREVENTSROW### with all available course fields for the similar course
+  Template ###SIMILARLINK### and ###SIMILARLINKTARGET### ti integrate an anchor in Detail View.
+- Add "sortingfieldcoursesincat" in TS configuration. default = sorting
+
+07-01-26 V0.9.10 Stefan Precht  <sprecht@gmx.de>
+- Bugfix release; Removes a bug in rendering the LMOverview Template.
+
+07-01-26 V0.9.9 Stefan Precht  <sprecht@gmx.de>
+- Bugfix release; Removes a bug in rendering the LMOverview Template.
+
+07-01-22 V0.9.8 Stefan Precht  <sprecht@gmx.de>
+- Integrated contingent management
+  Use the TS Flag usecontingent=1 to activate it.
+  With usage of the contingentmanagement, the subscribelink and the subscribeform ist only rendered if there ist more or equal than 1 place free
+  You can use the templatemarker ###CONTINGENTLEFT### in the detail-view and the subscribe-view
+- Extended the object model
+- Integrate the Trainer-Markers in the Course-Detailview
+
+06-02-27 Andreas Behrens; Stefan Precht  <behrens@b-networks.de; sprecht@gmx.de>
+
+	* Initial release

@@ -1,0 +1,405 @@
+plugin.tx_abcourses_pi1 {
+    # you only need this field for setup your abcourses completely via ts.
+    # leave it empty if you do not want to do so.
+    CMD =
+
+    #if you don't want to set an value here, you have to do this within each PlugIn FlexForm config.
+    pidList =
+
+    recursive = 2
+    template = typo3conf/ext/abcourses/pi1/abcourses_template.tmpl
+    uploaddir = uploads/tx_abcourses/
+    skillimagepath = typo3conf/ext/abcourses/
+    ratingimagepath = typo3conf/ext/abcourses/images/
+    parseFunc < tt_content.text.20.parseFunc
+
+    # the following lines are important for the configuration of this extension.
+    # please take notice of the documentation for this...
+    pidResults =
+    pidCourseDetails =
+    pidOverview =
+    pidLMOverview =
+    pidSubscribe =
+    pidSubscribeSuccess =
+    pidDetailsearch =
+
+	#An important thing! The locale configuration. Unfortunately this is a really ... part in TYPO3
+	#More about this in the documentation
+    #formatting below relates to the php function strftime
+    ddmmyy = %d.%m.%Y
+    locale = de_DE
+
+    hhmmss = %H:%M
+
+    #offset for the time fields
+    #This is important, to adjust the date fields as shown in the BE form with the shown time as rendered in the front end.
+	offset = -60
+
+    priceWithTax = 0
+    taxValue = 19
+    currency = EUR
+    lastminuteclass = lastminute
+    searchcoursefields=tx_abcourses_course.uid-title-teaser
+    sortingfieldcoursesincat = title
+    usecontingent = 0
+
+    dlimage = /typo3conf/ext/abcourses/images/dl_icon.gif
+    dlimage_pdf = /typo3conf/ext/abcourses/images/pdf_icon.gif
+    dlimage_tif =< dlimage
+    dlimage_zip =< dlimage
+
+    #use the two lines below if the pid of your abcourses plugin "details" have moved and must be redirected for persistence (e.g. for searchengines)
+    #this only works if you use realUrl !!! because it looks up the new url in the db tables used by realUrl
+    #redirectDetailPage = 0
+    #the "old" page id for displaying seminar-details. Do not delete this page or the abcourses plugin!
+    #redirectDetailPageId =
+    #redirectToDomain =
+
+    #if you need some special localized labels within this extension, just add them to this list (comma separated).
+    #Now you can add them to the pi1 locallang.xml of this extension and they will be available.
+    #This list is case insensitive. The template marker must be upper case.
+    addOnLabels = addonlbl-membershipnr
+
+	#Do you want your subscriptions to be tracked as tt_address records?
+    trackSubscriptionsAsRecords = 1
+
+    #This value is for looking up similar subscribers. It must be an available name of your formfields
+    #as well as a valid name for a tt_address attribute field.
+    #In order to process the lookup you should consider to make this field required for your subscribers.
+    addressRecordUniqueField = email
+
+    #BE Userid to create the tt_address records. This is just for association. Your webapp will not change it's user context!!!
+    beUserId = 0
+
+    #there are many possible template marker available in abcourses.
+    #this stdWrap is to wrap the ###LINKCATOVERVIEW### marker - thats a link to the pidOverview
+    linkCatoverviewWrap {
+        wrap = |
+    }
+    #and this one is to wrap the ###LINKDETAILSEARCH### - thats a link to the pidDetailsearch
+    linkDetailsearchWrap {
+        wrap = |
+    }
+    #and this one is to wrapt the '###LINKLMOVERVIEW###' - thats a link to pidLMOverview
+    #please take notice that the link title comes from i18n files
+    linkLMOverviewWrap {
+        wrap = |
+    }
+
+
+}
+
+plugin.tx_abcourses_pi1.catoverviewwithnextevents {
+	#Category fields can be placed here.
+	#...
+
+	#counter for the number of events in an category which should be rendered for each category
+	nextevents = 3
+
+	course{
+		#course fields can be placed here
+		#...
+
+		event{
+			#Event fields can be placed here
+			#...
+
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.specialcatoverview {
+	#Category fields can be placed here.
+	#...
+
+	#Set this to 0, and all courses for each selected categorie will be rendered.
+	#If you set this to 1, only courses with next events will be loaded.
+	showOnlyCoursesWithNextEvents = 0
+
+	#This limits the count of events which will be loaded for each loaded course.
+	nextEventsToLoad = 3
+
+	#Comma separated list of the selected categories to display.
+	#Only for direct TS immplementation. Use the Flexform for normal Plugins.
+	#selectedCategories =
+
+	course{
+		#course fields can be placed here
+		#...
+
+		event{
+			#Event fields can be placed here
+			#...
+
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.selectedevents {
+	cols = 2
+
+	#you need the next two value only if you want to include this view with TS and not as plugin with FF.
+	#If you set asLastMinuteView to 1 than this view will ignore the selectedEvents event-id list. Set maxNEvents to the amount of events you want to show.
+	#asLastMinuteView =
+	#maxNEvents =
+	#selectedEvents =
+	#showEventsAgo = 0 #this is only available in TS
+
+	course{
+		#course fields can be placed here
+		#...
+
+		event{
+			#Event fields can be placed here
+			#...
+		}
+		trainer {
+			#Trainer fields can be placed here
+			#...
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.subscribe {
+	#the address where administrative confirmation e-mails will be sent to.
+    sendTo = test@stefanprecht.de
+
+    mailFrom = alias@domain.de
+    mailFromName = Seminar Database
+
+    #the string list below must contain all used form fields
+    usedLabels = anrede,vorname,nachname,email,telefon,fax,firma,adresse,eventid,arrangement,invoiceaddress,membershipnr
+
+    #the string list below causes the corresponding form fields to be required
+    required = vorname,nachname,email
+
+    #use the following list to determine which form fields will be included in the confirmation email.
+    mailLabels = anrede,vorname,nachname,email,telefon,fax,membershipnr,firma,adresse,arrangement,invoiceaddress
+
+    # setting the following flag to 0 causes no confirmation e-mail is sent at all.
+    sendEmailsAfterSubscription = 1
+
+    #Set the following flag to 1 if you want that your subscriber get's an confirmation mail too.
+    #Otherwise only the admin will recieve a confirmation.
+    #This does not take an effect if the flag above is set to 0.
+    sendConfirmation = 0
+
+    #Here you can map your form fields with the corresponding tt_address entities.
+    #Format:  tt_address_fiel:your_field, tt_address_fiel:your_field, ...
+    tt_address_mapping=first_name:vorname,last_name:nachname,email:email,gender:gender
+
+    #more tt_address fields:
+    #middle_name
+    #birthday (you need a timestamp value here!)
+    #title
+    #phone
+    #mobile
+    #www
+    #company
+    #...and some more...
+
+    #next lines as example for the selectbox generator
+    #manlocselname = wunschstandort
+    #manlocselparams = class="mf-input"
+    #manlocselvalues = ,Hamburg,Hannover,Kassel,Berlin,Potsdam/Kleinmachnow,Stuttgart,Leipzig,Frankfurt,München,Regensburg,Nürnberg,Paderborn,Dortmund,Siegen,Wien
+
+    #Possible period for accommodation, depending on the start and enddate of the corresponding event.
+    accommodationPeriod = 2
+
+	hotel {
+		image       =
+		ratingImage =
+
+		arrangement {
+			priceWrap    =
+			priceTaxWrap =
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.catoverview {
+    parseFunc < plugin.tx_abcourses_pi1.parseFunc
+    cols = 2
+	catTitleLinkWrap {
+        wrap = <h2>|</h2>
+        case = upper
+    }
+
+	catTeaserWrap {
+        wrap = <p>|</p>
+    }
+
+    catImage {
+        wrap = |
+    }
+    courseSkillImageWrap {
+        wrap = |
+    }
+}
+
+
+plugin.tx_abcourses_pi1.coursesincat {
+    parseFunc < plugin.tx_abcourses_pi1.parseFunc
+
+	#set this to 1, if you want to display events in this view too. If you do not set this flag, the
+	#events are not available for the course instances and so they will not be rendered!
+	#Keep in mind this query may be expensive...
+	initevents = 0
+
+	category {
+		#category fields can be placed here
+		#...
+
+		course{
+			#course fields can be placed here
+			#...
+
+			event{
+				#Event fields can be placed here
+				#...
+
+			}
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.coursedetail {
+    parseFunc < plugin.tx_abcourses_pi1.parseFunc
+    showEventsAgo = 0
+    eventcols = 1
+
+    DefaultWrap {
+        wrap = |
+    }
+
+    conditionalCourse {
+    	courseTitlelinkWrap {
+        	wrap = <b>|</b><br>
+    	}
+    	courseTitleWrap {
+        	wrap = <b>|</b><br>
+    	}
+    	courseSubtitleWrap {
+    		wrap = <b>|</b><br>
+    	}
+    }
+
+    courseNumberWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseTitleWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseSubtitleWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseTeaserWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseDescriptionWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseEdupointsWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseEdupointslabelWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseDaysWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseDayslabelWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseConditionWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    courseConditionlabelWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    catTitlelinkWrap  < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    typeWrap  < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    trainerFullnameWrap  < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventNumberWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventTeaserWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventDateWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventDateStartWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventDateEndWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventTimeDateStartWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventTimeDateEndWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventContingentWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventPriceWrap  < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventPricetaxWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventTaxlabelWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventCurWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventRegStartWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventRegEndWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    eventSubscribeWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    pageTitleWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    pageSubtitleWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    pageLinkWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+
+    eventContingentLeftWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    useContingentInactiveWrap < plugin.tx_abcourses_pi1.coursedetail.DefaultWrap
+    similarLinkWrap {
+        wrap = <br />|
+    }
+    similarLinkTargetWrap {
+        wrap = <h3>|</h3>
+    }
+}
+
+
+plugin.tx_abcourses_pi1.eventsubscribe {
+    parseFunc < plugin.tx_abcourses_pi1.parseFunc
+
+     DefaultWrap {
+        wrap = |
+    }
+
+    courseNumberWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseTitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseSubtitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseTeaserWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseDescriptionWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseEdupointsWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseEdupointslabelWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseDaysWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseDayslabelWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseConditionWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    courseConditionlabelWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    catTitlelinkWrap  < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    typeWrap  < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    trainerFullnameWrap  < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventNumberWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventTeaserWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventDateWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventContingentWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventPriceWrap  < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventPriceTaxWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventCurWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventRegStartWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventRegEndWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    eventSubscribeWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    pageTitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    pageSubtitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    pageLinkWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    conditionsTitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    conditionsSubtitleWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    conditionsLinkWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+    noContingentWrap < plugin.tx_abcourses_pi1.eventsubscribe.DefaultWrap
+
+	participant {
+		titleWrap {
+		}
+		fullnameWrap {
+		}
+		companyWrap {
+		}
+		genderWrap {
+		}
+		firstNameWrap {
+		}
+		middleNameWrap {
+		}
+		lastNameWrap {
+		}
+		emailWrap {
+		}
+		phoneWrap {
+		}
+		mobileWrap {
+		}
+		cityWrap {
+		}
+		zipWrap {
+		}
+	}
+}
+
+plugin.tx_abcourses_pi1.resultlist {
+    parseFunc < plugin.tx_abcourses_pi1.parseFunc
+    course {
+    	#course fields can be placed here
+    	#...
+
+    }
+}

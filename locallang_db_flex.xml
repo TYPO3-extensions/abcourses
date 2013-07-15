@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Language labels for abcourses FlexForm</description>
+        <csh_table />
+        <labelContext type="array" />
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="general_settings">General Settings</label>
+            <label index="pages">Pages</label>
+            <label index="none">None</label>
+            <label index="level_1">1 Level</label>
+            <label index="level_2">2 Level</label>
+            <label index="level_3">3 Level</label>
+			<label index="special_view_settings">Special View Settings</label>
+			<label index="template">Template to use for the rendering of this plugin</label>
+			<label index="force_category_list">Force the display type of the Category-Overview to display only the categories list.</label>
+			<label index="subscription_event">Event for direct subscription.</label>
+			<label index="force_last-minute_events">Force the SelectedEvents view to display only last-minute events.</label>
+			<label index="last-minute_events_amount">The amount of last minute events you want to be shown. Leave this empty or set it to 0 to load every last minute event.</label>
+			<label index="special_view_selected_events">Events to be shown within the special view Selected-Events</label>
+			<label index="special_view_selected_categories">Categories to be shown within the special view Selected-Categories</label>
+			<label index="tab_config_info">Config info</label>
+			<label index="show_config_info">Show a short configuration overview?</label>
+        </languageKey>
+		<languageKey index="dk">EXT:abcourses/dk.locallang_db_flex.xml</languageKey>
+		<languageKey index="de">EXT:abcourses/de.locallang_db_flex.xml</languageKey>
+		<languageKey index="no">EXT:abcourses/no.locallang_db_flex.xml</languageKey>
+		<languageKey index="it">EXT:abcourses/it.locallang_db_flex.xml</languageKey>
+		<languageKey index="fr">EXT:abcourses/fr.locallang_db_flex.xml</languageKey>
+		<languageKey index="es">EXT:abcourses/es.locallang_db_flex.xml</languageKey>
+		<languageKey index="nl">EXT:abcourses/nl.locallang_db_flex.xml</languageKey>
+		<languageKey index="cz">EXT:abcourses/cz.locallang_db_flex.xml</languageKey>
+		<languageKey index="pl">EXT:abcourses/pl.locallang_db_flex.xml</languageKey>
+		<languageKey index="si">EXT:abcourses/si.locallang_db_flex.xml</languageKey>
+		<languageKey index="fi">EXT:abcourses/fi.locallang_db_flex.xml</languageKey>
+		<languageKey index="tr">EXT:abcourses/tr.locallang_db_flex.xml</languageKey>
+		<languageKey index="se">EXT:abcourses/se.locallang_db_flex.xml</languageKey>
+		<languageKey index="pt">EXT:abcourses/pt.locallang_db_flex.xml</languageKey>
+		<languageKey index="ru">EXT:abcourses/ru.locallang_db_flex.xml</languageKey>
+		<languageKey index="ro">EXT:abcourses/ro.locallang_db_flex.xml</languageKey>
+		<languageKey index="ch">EXT:abcourses/ch.locallang_db_flex.xml</languageKey>
+		<languageKey index="sk">EXT:abcourses/sk.locallang_db_flex.xml</languageKey>
+		<languageKey index="lt">EXT:abcourses/lt.locallang_db_flex.xml</languageKey>
+		<languageKey index="is">EXT:abcourses/is.locallang_db_flex.xml</languageKey>
+		<languageKey index="hr">EXT:abcourses/hr.locallang_db_flex.xml</languageKey>
+		<languageKey index="hu">EXT:abcourses/hu.locallang_db_flex.xml</languageKey>
+		<languageKey index="gl">EXT:abcourses/gl.locallang_db_flex.xml</languageKey>
+		<languageKey index="th">EXT:abcourses/th.locallang_db_flex.xml</languageKey>
+		<languageKey index="gr">EXT:abcourses/gr.locallang_db_flex.xml</languageKey>
+		<languageKey index="hk">EXT:abcourses/hk.locallang_db_flex.xml</languageKey>
+		<languageKey index="eu">EXT:abcourses/eu.locallang_db_flex.xml</languageKey>
+		<languageKey index="bg">EXT:abcourses/bg.locallang_db_flex.xml</languageKey>
+		<languageKey index="br">EXT:abcourses/br.locallang_db_flex.xml</languageKey>
+		<languageKey index="et">EXT:abcourses/et.locallang_db_flex.xml</languageKey>
+		<languageKey index="ar">EXT:abcourses/ar.locallang_db_flex.xml</languageKey>
+		<languageKey index="he">EXT:abcourses/he.locallang_db_flex.xml</languageKey>
+		<languageKey index="ua">EXT:abcourses/ua.locallang_db_flex.xml</languageKey>
+		<languageKey index="lv">EXT:abcourses/lv.locallang_db_flex.xml</languageKey>
+		<languageKey index="jp">EXT:abcourses/jp.locallang_db_flex.xml</languageKey>
+		<languageKey index="vn">EXT:abcourses/vn.locallang_db_flex.xml</languageKey>
+		<languageKey index="ca">EXT:abcourses/ca.locallang_db_flex.xml</languageKey>
+		<languageKey index="ba">EXT:abcourses/ba.locallang_db_flex.xml</languageKey>
+		<languageKey index="kr">EXT:abcourses/kr.locallang_db_flex.xml</languageKey>
+		<languageKey index="eo">EXT:abcourses/eo.locallang_db_flex.xml</languageKey>
+		<languageKey index="my">EXT:abcourses/my.locallang_db_flex.xml</languageKey>
+		<languageKey index="hi">EXT:abcourses/hi.locallang_db_flex.xml</languageKey>
+		<languageKey index="fo">EXT:abcourses/fo.locallang_db_flex.xml</languageKey>
+		<languageKey index="fa">EXT:abcourses/fa.locallang_db_flex.xml</languageKey>
+		<languageKey index="sr">EXT:abcourses/sr.locallang_db_flex.xml</languageKey>
+		<languageKey index="sq">EXT:abcourses/sq.locallang_db_flex.xml</languageKey>
+		<languageKey index="ge">EXT:abcourses/ge.locallang_db_flex.xml</languageKey>
+		<languageKey index="ga">EXT:abcourses/ga.locallang_db_flex.xml</languageKey>
+    </data>
+</T3locallang>

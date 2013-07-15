@@ -1,0 +1,16 @@
+tx_abcourses.metadata {
+    addKeywords = 1
+    addDescription = 1
+    keywords {
+        keywordsWrap {
+            wrap = <meta keywords="|"/>
+        }
+    }
+    description {
+        parseFunc < lib.parseFunc_RTE
+        length = 200
+        seoDescWrap {
+            wrap = <meta description="|"/>
+        }
+    }
+}

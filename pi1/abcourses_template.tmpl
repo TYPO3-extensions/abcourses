@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Default Template</title>
+</head>
+<body>
+
+<h1>Template CATOVERVIEW</h1>
+<p>This is to display the category overview.</p>
+<!--  ###CATOVERVIEW### begin -->
+
+<table class="catoverview">
+    <!--  ###ROW### begin -->
+    <tr class="###ODDEVEN###">
+        <!--  ###COL### begin -->
+        <td>
+        	<!--  ###CATEGORY### begin -->
+                <div class="catoverview">
+                    ###CATTITLELINK###<br />
+                    ###CATTEASER###<br />
+                    ###CATIMAGE###<br />
+                </div>
+            <!-- ###CATEGORY### end -->
+        </td>
+        <!--  ###COL### end -->
+        <!--  ###COLEMPTY### begin -->
+        <td>&nbsp;</td>
+        <!--  ###COLEMPTY### end -->
+    </tr>
+    <!--  ###ROW### end -->
+</table>
+
+<!--  ###CATOVERVIEW### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h1>Template CATOVERVIEWWITHNEXTEVENTS</h1>
+<p>This is to display the category overview with a listing of the next courses/events.</p>
+<!-- ###CATOVERVIEWWITHNEXTEVENTS### begin -->
+	<!-- ###CATEGORYS### begin -->
+		<div class="categorys">
+			<!-- ###CATEGORY### begin -->
+			    ###CATTITLELINK###<br />
+			    <!-- ###COURSES### begin -->
+			    	<div class="courses">
+			    		<!-- ###COURSE### begin -->
+			    			<div class="course">
+				    			 ###TITLELINK###<br />
+				    			 <!-- ###EVENTS### begin -->
+				    			 	<div class="events">
+				    			 		<!-- ###EVENT### begin -->
+					    			 		<div class="event ###LASTMINUTE###">
+					    			 			###DATE### - ###PRICE### ###CUR### (###PRICETAX### ###CUR### ###TAXLABEL###)<br />
+								            	###SUBSCRIBELINK###
+								            </div>
+				    			 		<!-- ###EVENT### end -->
+				    			 	</div>
+				    			 <!-- ###EVENTS### end -->
+			    			 </div>
+			    		<!-- ###COURSE### end -->
+			    	</div>
+			    <!-- ###COURSES### end -->
+		    <!-- ###CATEGORY### begin -->
+		</div>
+	</tr>
+	<!-- ###CATEGORYS### end -->
+<!-- ###CATOVERVIEWWITHNEXTEVENTS### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1>Template SPECIALCATOVERVIEW</h1>
+<p>This is to display only selected categories and their courses.</p>
+<!-- ###SPECIALCATOVERVIEW### begin -->
+	<!-- ###CATEGORYS### begin -->
+		<div class="categorys">
+			<!-- ###CATEGORY### begin -->
+			    ###CATTITLELINK###<br />
+			    <!-- ###COURSES### begin -->
+			    	<div class="courses">
+			    		<!-- ###COURSE### begin -->
+			    			<div class="course">
+				    			 ###TITLELINK###<br />
+				    			 <!-- ###EVENTS### begin -->
+				    			 	<div class="events">
+				    			 		<!-- ###EVENT### begin -->
+					    			 		<div class="event ###LASTMINUTE###">
+					    			 			###DATE### - ###PRICE######CUR### (###PRICETAX######CUR### ###TAXLABEL###)<br />
+								            	###SUBSCRIBELINK###
+								            </div>
+				    			 		<!-- ###EVENT### end -->
+				    			 	</div>
+				    			 <!-- ###EVENTS### end -->
+			    			 </div>
+			    		<!-- ###COURSE### end -->
+			    	</div>
+			    <!-- ###COURSES### end -->
+		    <!-- ###CATEGORY### begin -->
+		</div>
+	</tr>
+	<!-- ###CATEGORYS### end -->
+<!-- ###SPECIALCATOVERVIEW### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1>Template SELECTEDEVENTS</h1>
+<p>This is to display the category overview with a listing of the next courses/events.</p>
+<!-- ###SELECTEDEVENTS### begin -->
+	<!-- ###COURSES### begin -->
+		<div class="courses">
+			<p>
+			<!-- ###COURSE### begin -->
+				<div class="course">
+	    			 ###TITLELINK###<br />
+	    			 <!-- ###EVENTS### begin -->
+	    			 	<div class="events">
+	    			 		<!-- ###EVENT### begin -->
+		    			 		<div class="event ###LASTMINUTE###">
+		    			 			###DATE### - ###PRICE######CUR### (###PRICETAX######CUR### ###TAXLABEL###)<br />
+					            	###SUBSCRIBELINK###
+					            </div>
+					            <!-- ###LOCATIONS### begin -->
+					            	<!-- ###LOCATION### begin -->
+					            		###LOCCITY###
+					            	<!-- ###LOCATION### end -->
+					            <!-- ###LOCATIONS### end -->
+					            <!-- ###PARTICIPANTS### begin -->
+					            	<!-- ###PARTICIPANT### begin -->
+					            		###TITLE###<br>
+					            		###FULLNAME###<br>
+					            		###COMPANY###<br>
+					            		###GENDER###<br>
+					            		###FIRST_NAME###<br>
+					            		###MIDDLE_NAME###<br>
+					            		###LAST_NAME###<br>
+					            		###EMAIL###<br>
+					            		###PHONE###<br>
+					            		###MOBILE###<br>
+					            		###CITY###<br>
+					            		###ZIP###<br>
+					            	<!-- ###PARTICIPANT### end -->
+					            <!-- ###PARTICIPANTS### end -->
+	    			 		<!-- ###EVENT### end -->
+	    			 	</div>
+	    			 <!-- ###EVENTS### end -->
+	    			 <!-- ###TRAINERS### begin-->
+		    			 <!-- ###TRAINER### begin-->
+		    			 	###FULLNAME###<br>
+		    			 <!-- ###TRAINER### end-->
+	    			 <!-- ###TRAINERS### end-->
+				 </div>
+			<!-- ###COURSE### end -->
+			</p>
+			<hr />
+		</div>
+	<!-- ###COURSES### end -->
+	<!-- ###NODATA### begin -->
+	...
+	<!-- ###NODATA### end -->
+<!-- ###SELECTEDEVENTS### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Template COURSESINCAT</h1>
+<p>This is to display courses of a category.</p>
+<!--  ###COURSESINCAT### begin -->
+<div class="coursesincat">
+	<!-- ###CATEGORY### begin -->
+	   ###CATTITLE###
+	   <!-- ###COURSES### begin -->
+	   <div class="courses">
+	   		<!-- ###COURSE### begin -->
+	   		<div class="course">
+	   			<div class="events">
+				<!-- ###EVENTS### begin -->
+					###LABELDATE###<br />
+			 		<!-- ###EVENT### begin -->
+    			 			###DATESUBSCRIBELINK###<br />
+			 		<!-- ###EVENT### end -->
+			 	<!-- ###EVENTS### end -->
+			 	</div>
+	   			<div class="coursedetails">
+	   				###TITLELINK### (###LABELCOURSENUMBER### ###NUMBER###) - ###LABELPRICE### ###BASEPRICE### ###CUR### - ###DAYS### ###DAYSLABEL###
+	   			</div>
+	   			<div class="courseteaser">
+	   				###TEASER###
+	   			</div>
+			 	###DETAILLINK###
+			</div>
+	    	<!-- ###COURSE### end -->
+	    </div>
+	    <!-- ###COURSES### end -->
+	    <!-- ###NOCOURSES### begin -->
+	    	<br>Currently there are no courses available.
+	    <!-- ###NOCOURSES### end -->
+    <!-- ###CATEGORY### begin -->
+</div>
+<!--  ###COURSESINCAT### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+
+<h1>Template FILTER</h1>
+<p>This is to display a filterform. The filterform takes effect on Category and Last Minute Overview as well as on the Detail-Search.
+Just copy the Part below in an Other Template an it will be rendered.
+If the filter detects an Category ID or a Last Minute Flag it will render only related Data...
+!!!THIS FEATURE IS STILL IN PROGRESS AND WILL NOT WORK CURRENTLY!!!
+</p>
+<!--  ###FILTER### begin -->
+
+###FILTERFORMSTART###
+	###FILTERCATEGORIE###
+	###FILTERCOURSE###
+	###FILTERLOCATION###
+	###FILTERLASTMINUTE###
+	###FILTERTYPE###
+	###FILTERLEVEL###
+	###FILTERTEXT###
+
+	###FILTERFORMSUBMIT###
+###FILTERFORMEND###
+###FILTERCLEARFILTER###
+<!--  ###FILTER### end -->
+
+
+
+
+
+
+
+
+<h1>Template COURSEDETAIL</h1>
+<p>This is to display a single course.</p>
+<!--  ###COURSEDETAIL### begin -->
+
+    ###CATTITLE### ###TYPE###
+
+    <hr />
+
+    ###TITLE### - ###SUBTITLE### <br />
+
+    ###TEASER### <br />
+    ###DESCRIPTION###  <br /><br />
+    ###DAYS### ###DAYSLABEL### <br />
+    ###NUMBER### <br />
+    ###COURSESKILLLEVELIMAGE###<br>
+
+    ###EDUPOINTSLABEL###: ###EDUPOINTS### <br />
+    ###CONDITIONSLABEL###: ###CONDITIONSTEXT###<br />
+
+
+
+	<!-- ###FILES### begin-->
+		<!-- ###FILE### begin-->
+			###DOWNLOADLINK###
+			###DOWNLOADLINKIMAGE###
+		<!-- ###FILE### end-->
+	<!-- ###FILES### end-->
+
+    <!-- ###EVENT### begin-->
+    <table class="courseevent">
+        <tr>
+            <th>Kennung</th>
+            <th>Datum</th>
+            <th>Preis</th>
+            <th>&nbsp;</th>
+            <th>Teilnehmerzahl</th>
+            <th>Anmelden von</th>
+            <th>Anmelden bis</th>
+
+        </tr>
+        <!-- ###ROWEVENT### begin-->
+        <tr class="###ODDEVEN###">
+            <!-- ###COLEVENT### begin-->
+            <td class="###LASTMINUTE###">###EVENTNUMBER###<br>###EVENTTEASER###</td>
+            <td class="###LASTMINUTE###">
+            	<nobr>date ###DATE###</nobr><br>
+            	<nobr>datestart ###DATESTART###</nobr> <br>
+            	<nobr>dateend ###DATEEND###</nobr><br>
+            	<nobr>timedatestart ###TIMEDATESTART###</nobr> <br>
+            	<nobr>timedateend ###TIMEDATEEND###</nobr>
+            </td>
+            <td class="###LASTMINUTE###">###PRICE######CUR### (###PRICETAX######CUR### ###TAXLABEL###)</td>
+            <td>###SUBSCRIBELINK###</td>
+            <td>###CONTINGENTLEFT###(max. ###CONTINGENT###)</td>
+            <td>###REGSTART###</td>
+            <td>###REGEND###</td>
+            <!-- ###COLEVENT### begin-->
+            <!--  ###COLEMPTY### begin -->
+            <td colspan="8">&nbsp;</td>
+            <!--  ###COLEMPTY### end -->
+        </tr>
+        <!-- ###ROWEVENT### end-->
+        </table>
+    <!-- ###EVENT### end-->
+    <!--- ###NOEVENT### begin -->
+        Derzeit leider keine Termine.
+    <!--- ###NOEVENT### end -->
+    <p>&nbsp;</p>
+
+<hr><br>
+    <!--###CONDITIONS### begin-->
+    	<h4>###CONDITIONSLABEL###</h4>
+    	<!-- ###COURSE### begin -->
+        ###TITLE### <br />
+        ###TITLELINK### <br />
+        ###SUBTITLE###<br />
+        ###DETAILLINK###
+        <!-- ###COURSE### end -->
+    <!--###CONDITIONS### end-->
+
+    <!-- ###NOCONDITIONS### begin -->
+        Für dieses Kurs sind keine speziellen vorausgehenden Kurse notwendig.
+    <!-- ###NOCONDITIONS### end -->
+<br><hr>
+
+    <p>&nbsp;</p>
+    <!--###TRAINER### begin-->
+
+        Unsere Trainer für diesen Kurs:<br />
+        <!-- ###ROWTRAINER### begin-->
+            ###TRAINERTITLE### ###FULLNAME###
+			###TRAINERIMAGE###
+        <!-- ###ROWTRAINER### end-->
+
+    <!--###TRAINER### end-->
+    <!--###NOTRAINER### begin -->
+        Diesem Kurs sind aktuell keine bestimmten Dozenten zugewiesen.
+    <!--###NOTRAINER### end -->
+    <p>&nbsp;</p>
+
+	<!-- ###TEACHINGAIDS### begin -->
+		<!-- ###TEACHINGAID### begin -->
+			###NAME###
+		<!-- ###TEACHINGAID### end -->
+	<!-- ###TEACHINGAIDS### end -->
+
+    <!-- ###PAGE### begin-->
+
+        Was Sie hierzu noch lesen sollten: <br />
+        <!-- ###ROWPAGE### begin-->
+
+            ###PAGETITLE### - ###PAGESUBTITLE### [###PAGELINK###] <br/>
+
+        <!-- ###ROWPAGE### end-->
+
+
+    <!-- ###PAGE### end-->
+
+    <!-- ###NOPAGE### begin-->
+        Lesetipps? Alles auf diesen Seiten. :-)
+    <!-- ###NOPAGE### end-->
+
+    <!-- ###SIMILAREVENTS### begin-->
+        ###SIMILARTARGET###
+        <!-- ###SIMILAREVENTSROW### begin-->
+            ###TITLELINK###<br/>
+        <!-- ###SIMILAREVENTSROW### end-->
+    <!-- ###SIMILAREVENTS### end-->
+    <!-- ###NOSIMILAREVENTS### begin-->
+
+    <!-- ###NOSIMILAREVENTS### end-->
+
+
+<!--  ###COURSEDETAIL### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h1>Template SUBSCRIBE</h1>
+<p>This is to subscribe.</p>
+<!--  ###SUBSCRIBE### begin -->
+
+    <h2>Anmelden</h2>
+    ###TITLE### - ###SUBTITLE### <br />
+    ###TEASER### <br />
+
+    <!-- ###EVENT### begin-->
+        <table class="courseevent">
+        <tr>
+            <th>Kennung</th>
+            <th>Datum</th>
+            <th>Preis</th>
+            <th>Teilnehmerzahl</th>
+            <th>Anmelden von</th>
+            <th>Anmelden bis</th>
+        </tr>
+        <tr>
+            <td class="###LASTMINUTE###">###EVENTNUMBER###</td>
+            <td class="###LASTMINUTE###">###DATE###</td>
+            <td class="###LASTMINUTE###">###PRICE######CUR### (###PRICETAX######CUR### ###TAXLABEL###)</td>
+            <td>###CONTINGENT###</td>
+            <td>###REGSTART###</td>
+            <td>###REGEND###</td>
+        </tr>
+
+        </table>
+    <!-- ###EVENT### end-->
+    <p>###DETAILLINK###</p>
+    <p>&nbsp;</p>
+    <!--###TRAINER### begin-->
+
+        Unsere Trainer für diesen Termin:<br />
+        <!-- ###ROWTRAINER### begin-->
+            ###FULLNAME###
+        <!-- ###ROWTRAINER### end-->
+
+    <!--###TRAINER### end-->
+    <!--###NOTRAINER### begin -->
+        Diesem Termin sind aktuell keine bestimmten Dozenten zugewiesen.
+    <!--###NOTRAINER### end -->
+
+
+    <p>&nbsp;</p>
+    <!--###PARTICIPANTS### begin-->
+
+        ###LABELPARTICIPANTS###<br />
+        <!-- ###PARTICIPANT### begin-->
+            ###TITLE###<br>
+            ###FULLNAME###<br>
+            ###COMPANY###<br>
+            ###GENDER###<br>
+            ###FIRST_NAME###<br>
+            ###MIDDLE_NAME###<br>
+            ###LAST_NAME###<br>
+            ###EMAIL###<br>
+            ###PHONE###<br>
+            ###MOBILE###<br>
+            ###CITY###<br>
+            ###ZIP###<br>
+        <!-- ###PARTICIPANT### end-->
+
+    <!--###PARTICIPANTS### end-->
+    <!--###NOPARTICIPANTS### begin -->
+        Diesem Termin sind aktuell keine Teilnehmer zugewiesen.
+    <!--###NOPARTICIPANTS### end -->
+
+
+    <p>&nbsp;</p>
+    <!--###LOCATION### begin-->
+        ###LOCNAME###<br />
+        ###LOCSTREET###<br />
+        ###LOCZIP###<br />
+        ###LOCCITY###<br />
+        ###LOCPHONE###<br />
+        ###LOCFAX###<br />
+        ###LOCEMAIL###<br />
+        ###LOCPERSON###<br />
+    <!--###LOCATION### end-->
+    <!--###NOLOCATION### begin-->
+        Bisher steht noch kein Ort fest.
+    <!--###NOLOCATION### end-->
+    ###SUBSCRIBEFORM###
+
+<!--  ###SUBSCRIBE### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1>Template SEARCHRESULT</h1>
+
+<h1>Template SEARCHRESULT</h1>
+<p>This is to subscribe.</p>
+<!--  ###SEARCHRESULT### begin -->
+	<div class="coursesincat">
+		<h1>###LABELHEADERSEARCHRESULTS###</h1>
+	   <!-- ###COURSES### begin -->
+	   <div class="courses">
+	   		<!-- ###COURSE### begin -->
+	   		<div class="course">
+	   			<div class="events">
+				<!-- ###EVENTS### begin -->
+					###LABELDATE###<br />
+			 		<!-- ###EVENT### begin -->
+    			 			###DATESUBSCRIBELINK###<br />
+			 		<!-- ###EVENT### end -->
+			 	<!-- ###EVENTS### end -->
+			 	</div>
+	   			<div class="coursedetails">
+	   				###TITLELINK### (###LABELCOURSENUMBER### ###NUMBER###) - ###LABELPRICE### ###BASEPRICE### ###CUR### - ###DAYS### ###DAYSLABEL###
+	   			</div>
+	   			<div class="courseteaser">
+	   				###TEASER###
+	   			</div>
+			 	###DETAILLINK###
+			</div>
+	    	<!-- ###COURSE### end -->
+	    </div>
+	    <!-- ###COURSES### end -->
+    </div>
+    <!--###NOSEARCHRESULT### begin-->
+    	<h1>###LABELHEADERSEARCHRESULTS###</h1>
+        <p>###LABELNORESULTS###</p>
+        ###LINKCATOVERVIEW###
+    <!--###NOSEARCHRESULT### end-->
+<!--  ###SEARCHRESULT### begin -->
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1>Template QUICKSEARCH</h1>
+<p>This for a little Quicksearchbox</p>
+<!--  ###QUICKSEARCH### begin -->
+    <form action="###PATHSEARCHRESULT###" method="post">
+        <input type="text" name="sword" value=""/>
+        <input type="submit" value="###LABELSUBMIT###">
+    </form>
+<!--  ###QUICKSEARCH### end -->
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h1>Template SUBSCRIBEFORM</h1>
+<p>This for a subscribeform. </p>
+<!--  ###SUBSCRIBEFORMTMPL### begin -->
+    <h2>###LABELSUBSCRIBEHEADER###</h2>
+    ###LABELWARNING###
+    ###WARNING###
+    <form action="###PATHSUBSCRIBE###" method="post">
+
+        <!--  ###HOTELS### begin -->
+        <fieldset>
+        <legend>###LABELACCOMMODATION###</legend>
+	        <div class="desc">###LABELARRANGEMENTSDESC###</div>
+	        <div class="period">
+		        ###LABELSELPERIODSTART### - ###SELPERIODSTART###
+		        ###LABELSELPERIODEND### - ###SELPERIODEND###
+	        </div>
+            <!--  ###HOTEL### begin -->
+            <div class="hotel">
+                ###NAME###
+                ###SUBTITLE###
+                ###IMAGE###
+                ###LINK###
+                ###RATING###
+                <!--  ###ARRANGEMENTS### begin -->
+                <div class="arrangements">
+                    <!--  ###ARRANGEMENT### begin -->
+                    <p>
+                        <input type="radio" name="Arrangement" value="###FORMFIELD###" /> ###FRONTENDNAME### - ###PRICE### ###CUR### (###PRICETAX### ###CUR### ###TAXLABEL###)
+                    </p>
+                    <!--  ###ARRANGEMENT### end -->
+                </div>
+                <!--  ###ARRANGEMENTS### end -->
+            </div>
+            <!--  ###HOTEL### end -->
+        </fieldset>
+        <!--  ###HOTELS### end -->
+        <fieldset>
+            <legend>Pers&ouml;nliche Daten</legend><br />
+            ###LABELTITLE### <select name="Anrede"><option select="selected">###LABELTITLE.I.0###</option><option>###LABELTITLE.I.1###</option><option>###LABELTITLE.I.2###</option></select><br />
+            <input type="radio" name="gender" value="m">###LABELMALE###</input><input type="radio" name="gender" value="f">###LABELFEMALE###</input><br />
+            ###LABELNAME### <input type="text" name="Vorname" value="###VORNAME###"/><br />
+            ###LABELLASTNAME### <input type="text" name="Nachname" value="###NACHNAME###"/><br />
+            ###LABELEMAIL### <input type="text" name="Email" value="###EMAIL###"/>   <br />
+            ###LABELPHONE### <input type="text" name="Telefon" value="###TELEFON###"/><br />
+            ###LABELLOCFAX### <input type="text" name="Fax" value="###FAX###"/><br />
+            ###LABELCOMPANY### <input type="text" name="Firma" value="###FIRMA###"/><br />
+            ###LABELADDRESS### <textarea name="adresse">###ADRESSE###</textarea><br />
+            ###ADDONLBL-MEMBERSHIPNR### <textarea name="membership">###ADRESSE###</textarea><br />
+            ###LABELINVOICEADDRESS### <textarea name="invoiceaddress">###INVOICEADDRESS###</textarea>
+        </fielset>
+
+        <input type="hidden" name="subscribe" value="1" />
+        <input type="hidden" name="eventid" value="###EVENTID###" />
+		<br />
+        <input type="submit" value="###LABELSUBMITSUBSCRIBE###" />
+    </form>
+    <!--  ###NOSUBSCRIBEFORMTMPL### begin -->
+            ###LABELERRORCONTACTUS###<br>
+            ###LINKCATOVERVIEW###<br>
+            ###LINKDETAILSEARCH###
+    <!--  ###NOSUBSCRIBEFORMTMPL### end -->
+<!--  ###SUBSCRIBEFORMTMPL### end -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h1>Template MAILSUBSCRIBESUCCESSPLAIN</h1>
+<p>Success Info Email. Subject follows after begin....</p>
+<!--  ###MAILSUBSCRIBESUCCESSPLAIN### begin -->
+:: ###MAILSALUTATION### ###VORNAME### ###NACHNAME###
+
+###MAILTEASER###
+
+<!-- ###COURSE### begin-->
+###TITLE###
+-
+###SUBTITLE####
+
+###TEASER###
+<!-- ###COURSE### end-->
+
+###LABELEVENTINFO###
+<!-- ###EVENT### begin-->
+###LABELEVENT###: ###EVENTNUMBER###
+###LABELDATE###: ###DATE###
+###LABELPRICE###: ###PRICE######CUR### (###PRICETAX######CUR### ###TAXLABEL###)
+###LABELPARTICIPIANTS###: ###CONTINGENT###
+###LABELREGSTART###:###REGSTART###
+###LABELREGEND###:###REGEND###
+<!-- ###EVENT### end-->
+
+###LABELLOCATIONINFO###
+<!--###LOCATION### begin-->
+###LABELLOCNAME### ###LOCNAME###
+###LABELLOCSTREET### ###LOCSTREET###
+###LABELLOCZIP### ###LOCZIP###
+###LABELLOCCITY### ###LOCCITY###
+###LABELLOCPHONE### ###LOCPHONE###
+###LABELLOCFAX### ###LOCFAX###
+###LABELLOCEMAIL### ###LOCEMAIL###
+###LABELLOCPERSON### ###LOCPERSON###
+<!--###LOCATION### end-->
+<!--###NOLOCATION### begin-->
+###LABELNOLOCATION###
+<!--###NOLOCATION### end-->
+
+<!--  ###HOTEL### begin -->
+###NAME###
+<!--  ###ARRANGEMENTS### begin -->
+    <!--  ###ARRANGEMENT### begin -->
+###FRONTENDNAME###
+    <!--  ###ARRANGEMENT### end -->
+<!--  ###ARRANGEMENTS### end -->
+###ACCOMMODATION-START### - ###ACCOMMODATION-END###
+<!--  ###HOTEL### end -->
+
+###LABELFORMDATA###
+###FORMDATA###
+
+###MAILFOOTER###
+###LABELREGARDS###
+<!--  ###MAILSUBSCRIBESUCCESSPLAIN### end -->
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

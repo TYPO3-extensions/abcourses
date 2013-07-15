@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallangExt>
+    <data type="array">
+        <languageKey index="fi" type="array">
+            <label index="general_settings">Yleisasetuksia</label>
+            <label index="pages">Sivut</label>
+            <label index="none">ei</label>
+            <label index="level_1">1 taso</label>
+            <label index="level_2">2 tasoa</label>
+            <label index="level_3">3 tasoa</label>
+            <label index="special_view_settings">Erityisnäyttöjen data</label>
+            <label index="template">Käytettävä mallinne (mallinnetiedoston polku)</label>
+            <label index="force_category_list">Pakota näyttötyypissä &quot;Kategorian yleiskatsaus&quot; näytettäväksi vain kategorialista.</label>
+            <label index="subscription_event">Tapahtuma, johon on suora ilmoittautuminen</label>
+            <label index="force_last-minute_events">Pakota näyttämään valittujen tapahtumien näytössä vain viime minutin tapahtumat.</label>
+            <label index="last-minute_events_amount">Lukumäärä kuinka monta viimeminuutin tapahtumaa halutaan näyttää. Jätä kohta tyhjäksi tai laita 0 ladataksesi kaikki viime minuutin tapahtumat.</label>
+            <label index="special_view_selected_events">Erityisnäytössä esitettäväksi valitut tapahtumat</label>
+            <label index="special_view_selected_categories">Categories to be shown within the special view Selected-Categories</label>
+            <label index="tab_config_info">Config info</label>
+            <label index="show_config_info">Show a short configuration overview?</label>
+        </languageKey>
+    </data>
+</T3locallangExt>

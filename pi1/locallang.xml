@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description></description>
+        <type></type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="back">Go back</label>
+            <label index="pi_list_searchBox_search">Search</label>
+            <label index="coursedetail_link">Detailed informations</label>
+            <label index="labelcoursedays">Duration</label>
+            <label index="labelday">Day</label>
+            <label index="labeldays">Days</label>
+            <label index="nodata">No data found. Maybe there are no records for this view at the moment.</label>
+            <label index="novalue">not specified</label>
+            <label index="taxlabel">inclusive ###TAX###% of VAT</label>
+            <label index="subscribelabel">Subscribe</label>
+            <label index="subscribelabel_unavailable">not subscribeable</label>
+            <label index="pagelinklabel">more...</label>
+            <label index="conditionslinklabel">Details...</label>
+            <label index="coursedetaillinklabel">Seminar details and appointments...</label>
+            <label index="nosearchresultlabel">Your search does not return any results...</label>
+            <label index="labelcatoverview">Survey of categories</label>
+            <label index="catoverview_link">Go to the survey of categories...</label>
+            <label index="detailsearch_link">Go to detail search...</label>
+            <label index="lmoverview_link">Current special offers...</label>
+            <label index="lmoverview_link_title">Seminars Trainings Courses</label>
+            <label index="lmoverview_link_alt">Traingings Courses Seminars</label>
+            <label index="labelsubmitsearch">Search for seminars</label>
+            <label index="labelsubmitsubscribe">Subscribe to this seminar!</label>
+            <label index="labelheadersubscribe">You are going to subscribe this seminar</label>
+            <label index="labelheadersearchresults">Search results</label>
+            <label index="labeltitle">Form of address</label>
+            <label index="labeltitle.I.0">Please choose between...</label>
+            <label index="labeltitle.I.1">Mrs.</label>
+            <label index="labeltitle.I.2">Mr.</label>
+            <label index="labeladditional">Reserve a smokers accomodation?</label>
+            <label index="labeladditional.I.0">Never mind</label>
+            <label index="labeladditional.I.1">No</label>
+            <label index="labeladditional.I.2">Yes please</label>
+            <label index="labelname">Forename</label>
+            <label index="labellastname">Last name</label>
+            <label index="labelcompany">Company</label>
+            <label index="labeladdress">Address</label>
+            <label index="labelemail">Email</label>
+            <label index="labelphone">Phone</label>
+            <label index="labelinvoiceaddress">Invoice address (if differing)</label>
+            <label index="labelwarningsubscribe">Some required fields are missing. Please check the follwing Form-Fields&lt;br /&gt;</label>
+            <label index="labelerrorcontactus">Seminar subscription fails! Please contact us!</label>
+            <label index="labelevent">Seminar number</label>
+            <label index="labelnoevents">Appointments as special arrangement only.</label>
+            <label index="labeleventtitle">Seminar</label>
+            <label index="labeldate">Appointments</label>
+            <label index="labelprice">Costs</label>
+            <label index="labelparticipiants">Participants</label>
+            <label index="labelmax">max.</label>
+            <label index="labelregstart">Subscribe from</label>
+            <label index="labelregend">Subscribe until</label>
+            <label index="labelpoints">Points</label>
+            <label index="labelconditions">Previous knowledge</label>
+            <label index="labellocname">Location</label>
+            <label index="labellocstreet">Street</label>
+            <label index="labelloczip">Zipcode</label>
+            <label index="labelloccity">City</label>
+            <label index="labellocphone">Phone</label>
+            <label index="labellocfax">Fax</label>
+            <label index="labellocemail">E-mail</label>
+            <label index="labellocperson">Contact person</label>
+            <label index="labelnolocation">There is no location stored for this seminar</label>
+            <label index="labeltrainer">Trainer</label>
+            <label index="labelteachingaids">Teaching aids</label>
+            <label index="labelaccommodation">Accommodation</label>
+            <label index="labelarrangementsdesc">If you want to reserve an accommodation with your subscription please chose start- and end-time as far as one of the arrangements shown below. Shown costs are ###TAXLABEL### and apply for one overnight stay.</label>
+            <label index="labelselperiodstart">Accommodation from</label>
+            <label index="labelselperiodend">Accommodation until</label>
+            <label index="labelcoursenumber">Seminar-Number</label>
+            <label index="mailsalutation">Hello</label>
+            <label index="mailteaser">We received the following informations with your subscription.</label>
+            <label index="labeleventinfo">Seminar</label>
+            <label index="labellocationinfo">Location</label>
+            <label index="mailfooter">If you have any questions about this, do not hesitate to contact us!</label>
+            <label index="labelregards">Sincerely yours</label>
+            <label index="mailsubjectadmin">Seminar subscription</label>
+            <label index="labelformdata">Your specs</label>
+            <label index="requiredhint">Fields with an * are required.</label>
+            <label index="lblmshorttitle">Seminars / Trainings</label>
+            <label index="lblmoverviewtitle">Current offers</label>
+            <label index="filterform_submit">Use filter</label>
+            <label index="lbfilterformstart">Use this filter, to get related seminars</label>
+            <label index="lbfiltercategorie">Category filter</label>
+            <label index="lbfiltercourse">Course filter</label>
+            <label index="lbfilterlocation">Location filter</label>
+            <label index="lbfilterlastminute">Last minute filter</label>
+            <label index="lbfiltertype">Typ filter</label>
+            <label index="lbfilterlevel">Level filter</label>
+            <label index="lbfiltertext">Text filter</label>
+            <label index="nocontingent">This seminar reaches the max. amount of subscriptions. Please choose an other appointment or contact us.</label>
+            <label index="labelpages">More informations</label>
+            <label index="labelsimilar">Similar seminars</label>
+            <label index="lbsimilarlink">Looking for similar seminars?</label>
+            <label index="lbsimilarlinktarget">Similar seminars / courses</label>
+            <label index="labelbacktocourse">Choose another appointment?</label>
+            <label index="labelcoursetype">Type</label>
+            <label index="addonlbl-membershipnr">Membership Nr.</label>
+            <label index="labelparticipants">Current Participants</label>
+            <label index="labelmale">Mr.</label>
+            <label index="labelfemale">Mrs.</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="back">ZurÃ¼ck</label>
+            <label index="pi_list_searchBox_search">Suche</label>
+            <label index="coursedetail_link">Detailierte Infos</label>
+            <label index="labelcoursedays">Dauer</label>
+            <label index="labelday">Tag</label>
+            <label index="labeldays">Tage</label>
+            <label index="nodata">Derzeit sind keine Daten zum Anzeigen vorhanden.</label>
+            <label index="novalue">keine Angaben</label>
+            <label index="taxlabel">inkl. ###TAX###% MwSt.</label>
+            <label index="subscribelabel">Buchen</label>
+            <label index="subscribelabel_unavailable">Belegt</label>
+            <label index="pagelinklabel">mehr...</label>
+            <label index="conditionslinklabel">Details...</label>
+            <label index="coursedetaillinklabel">Seminar-Details und Termine...</label>
+            <label index="nosearchresultlabel">Ihre Suche ergab keine Ergebnisse.</label>
+            <label index="labelcatoverview">Kategorie-&amp;Uuml;bersicht</label>
+            <label index="catoverview_link">Zur Kategorien &amp;Uuml;bersicht...</label>
+            <label index="detailsearch_link">Zur Detailsuche...</label>
+            <label index="lmoverview_link">Aktuelle Aktions-Seminare...</label>
+            <label index="lmoverview_link_title">Seminare Schulungen Kurse</label>
+            <label index="lmoverview_link_alt">Schulung Kurs Seminar</label>
+            <label index="labelsubmitsearch">Seminar suchen</label>
+            <label index="labelsubmitsubscribe">Seminar buchen!</label>
+            <label index="labelheadersubscribe">Dieses Seminar buchen</label>
+            <label index="labelheadersearchresults">Suchergebnisse</label>
+            <label index="labeltitle">Anrede</label>
+            <label index="labeltitle.I.0">Bitte w&amp;auml;hlen</label>
+            <label index="labeltitle.I.1">Frau</label>
+            <label index="labeltitle.I.2">Herr</label>
+            <label index="labeladditional">Raucherzimmer buchen?</label>
+            <label index="labeladditional.I.0">Keine Angabe</label>
+            <label index="labeladditional.I.1">Nein</label>
+            <label index="labeladditional.I.2">Ja</label>
+            <label index="labelname">Vorname</label>
+            <label index="labellastname">Nachname</label>
+            <label index="labelcompany">Firma</label>
+            <label index="labeladdress">Adresse</label>
+            <label index="labelemail">Email</label>
+            <label index="labelphone">Telefon</label>
+            <label index="labelinvoiceaddress">Rechnungsadresse (wenn abweichend)</label>
+            <label index="labelwarningsubscribe">Es fehlen noch Angaben! Bitte pr&amp;uuml;fen Sie Ihre Angaben in folgenden Feldern:&lt;br /&gt;</label>
+            <label index="labelerrorcontactus">Das Seminar konnte nicht gebucht werden. Bitte wenden Sie sich direkt an uns!</label>
+            <label index="labelevent">Seminar-Nummer</label>
+            <label index="labelnoevents">Termine nach Absprache</label>
+            <label index="labeleventtitle">Seminar</label>
+            <label index="labeldate">Termine</label>
+            <label index="labelprice">Kosten</label>
+            <label index="labelparticipiants">Teilnehmer</label>
+            <label index="labelmax">max.</label>
+            <label index="labelregstart">Buchen ab</label>
+            <label index="labelregend">Buchen bis</label>
+            <label index="labelpoints">Punkte</label>
+            <label index="labelconditions">Vorwissen</label>
+            <label index="labellocname">Standort</label>
+            <label index="labellocstreet">StraÃe</label>
+            <label index="labelloczip">PLZ</label>
+            <label index="labelloccity">Stadt</label>
+            <label index="labellocphone">Telefon</label>
+            <label index="labellocfax">Fax</label>
+            <label index="labellocemail">Email</label>
+            <label index="labellocperson">Ansprechpartner</label>
+            <label index="labelnolocation">FÃ¼r dieses Seminar wurde kein direkter Standort hinterlegt.</label>
+            <label index="labeltrainer">Trainer</label>
+            <label index="labelteachingaids">Lehrmittel</label>
+            <label index="labelaccommodation">Unterbringung</label>
+            <label index="labelarrangementsdesc">M&amp;ouml;chten Sie auch eine Unterbringung buchen, w&amp;auml;hlen Sie bitte Start- und End-Zeit sowie eine der dargestellten Optionen. Die gezeigten Preise verstehen sich ###TAXLABEL### und gelten jeweils fÃ¼r eine Ãbernachtung.</label>
+            <label index="labelselperiodstart">Unterbringung von</label>
+            <label index="labelselperiodend">Unterbringung bis</label>
+            <label index="labelcoursenumber">Seminar-Nummer</label>
+            <label index="mailsalutation">Hallo</label>
+            <label index="mailteaser">Folgende Daten haben wir fÃ¼r Ihre Buchung erhalten.</label>
+            <label index="labeleventinfo">Seminar</label>
+            <label index="labellocationinfo">Ort des Seminars</label>
+            <label index="mailfooter">Wenn Sie noch weitere Fragen hierzu haben, wenden Sie sich gern direkt an uns.</label>
+            <label index="labelregards">Mit freundlichen GrÃ¼Ãen</label>
+            <label index="mailsubjectadmin">Seminarbuchung </label>
+            <label index="labelformdata">Ihre Angaben</label>
+            <label index="requiredhint">Mit einem * markierte Eingabefelder m&amp;uuml;ssen mindestens eingetragen werden.</label>
+            <label index="lblmshorttitle">Seminare / Schulungen / Aktionen</label>
+            <label index="lblmoverviewtitle">Aktuelle Angebote</label>
+            <label index="filterform_submit">Filter anwenden</label>
+            <label index="lbfilterformstart">Nutzen Sie diese Filter, um die Ansicht einzuschrÃ¤nken</label>
+            <label index="lbfiltercategorie">Kategorie-Filter</label>
+            <label index="lbfiltercourse">Kurs-Filter</label>
+            <label index="lbfilterlocation">Ort-Filter</label>
+            <label index="lbfilterlastminute">Lastminute-Filter</label>
+            <label index="lbfiltertype">Typ-Filter</label>
+            <label index="lbfilterlevel">Level-Filter</label>
+            <label index="lbfiltertext">Volltext-Filter</label>
+            <label index="nocontingent">Dieser Termin ist leider schon belegt. Bitte w&amp;auml;hlen Sie einen anderen oder sprechen Sie uns direkt an.</label>
+            <label index="labelpages">Weitere Informationen</label>
+            <label index="labelsimilar">&amp;Auml;nliche Seminare</label>
+            <label index="lbsimilarlink">&amp;Auml;hnliches Seminar gesucht?</label>
+            <label index="lbsimilarlinktarget">&amp;Auml;hnliche Seminare / Kurse</label>
+            <label index="labelbacktocourse">Anderen Termin w&amp;auml;hlen?</label>
+            <label index="labelcoursetype">Einstufung</label>
+            <label index="addonlbl-membershipnr">Mitglieds Nr.</label>
+            <label index="labelparticipants">Teilnehmer aktuell</label>
+            <label index="labelmale">Herr</label>
+            <label index="labelfemale">Frau</label>
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+        <languageKey index="eo" type="array">
+        </languageKey>
+        <languageKey index="my" type="array">
+        </languageKey>
+    </data>
+</T3locallang>
