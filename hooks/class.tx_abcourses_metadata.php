@@ -43,8 +43,13 @@ class tx_abcourses_metadata {
     private $conf = array();
     public $cObj = null; //as userFunc accesses this, it needs to be public
 
-
-    function __construct($cObj)
+    /**
+     * To avoid bothering WARN message when instantiated with makeInstance, the parameter cObj is set to null by
+     * default. Make instance accesses the property directly. wtf. How ever. Take care to set this manually, if you use
+     * normal instantiation.
+     * @param string $cObj
+     */
+    function __construct($cObj=null)
     {
         $this->cObj = $cObj;
 
@@ -93,9 +98,13 @@ class tx_abcourses_metadata {
         $keywords = $this->getCurrentCourse()->getSingleData(cCourse::KEYWORDS);
         if (!empty($keywords)) {
             $keywords = htmlspecialchars($keywords);
+            if (!empty($this->cObj)) {
             $GLOBALS['TSFE']->additionalHeaderData['abcourses_keywords'] = $this->cObj->stdWrap($keywords,
                 $this->conf['keywords.']['keywordsWrap.']);
-            //$GLOBALS['TSFE']->additionalHeaderData['abcourses_keywords'] = "<meta keywords=\"".$keywords."\"/>";
+            } else {
+                //just as fallback
+                $GLOBALS['TSFE']->additionalHeaderData['abcourses_keywords'] = "<meta keywords=\"".$keywords."\"/>";
+            }
         }
     }
 
@@ -107,11 +116,15 @@ class tx_abcourses_metadata {
             $description = $this->cObj->parseFunc($description, $this->descriptionParseFuncConfig);
             $description = strip_tags($description);
             $description = mb_substr($description,0,$this->descriptionLength,'UTF-8');
+
+            if (!empty($this->cObj)) {
             $GLOBALS['TSFE']->additionalHeaderData['abcourses_description'] = $this->cObj->stdWrap($description,
                 $this->conf['description.']['seoDescWrap.']);
-            //$GLOBALS['TSFE']->additionalHeaderData['abcourses_description'] = "<meta description=\"".$description."\" />";
+            } else {
+                //just as fallback
+                $GLOBALS['TSFE']->additionalHeaderData['abcourses_description'] = "<meta description=\"".$description."\" />";
+            }
         }
-
     }
 
     /**

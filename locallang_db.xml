@@ -202,7 +202,7 @@
             <label index="tx_abcourses_hotel.rating.I.3">3 Sterne</label>
             <label index="tx_abcourses_hotel.rating.I.4">4 Sterne</label>
             <label index="tx_abcourses_hotel.rating.I.5">5 Sterne</label>
-            <label index="tx_abcourses_arrangement">Buchunsoption</label>
+            <label index="tx_abcourses_arrangement">Buchungsoption</label>
             <label index="tx_abcourses_arrangement.backendname">Backend Titel (gezeigt im BE)</label>
             <label index="tx_abcourses_arrangement.frontendname">Bezeichnung für den Anwender</label>
             <label index="tx_abcourses_arrangement.hotel">Hotel</label>

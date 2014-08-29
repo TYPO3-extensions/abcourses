@@ -1,8 +1,6 @@
 <T3DataStructure>
 	<meta>
-		<!--
-			<langDisable>1</langDisable>
-			<langChildren>1</langChildren>!-->
+        <langDisable>1</langDisable>
 	</meta>
 	<sheets>
 		<sDEF>

@@ -1,5 +1,14 @@
 (add new changes on top of this file)
 
+14-08-29 Stefan Precht <sprecht@gmx.de>
+- Fixed a bug within the course-detail template.
+- Added landDisable=1 to FlexForm's meta node
+- Added default value within *_metadata's constructor and implemented fallbacks if cObj is not set
+- check for empty needles (but if there are some, it is most likely an ext missconfiguration)
+- set tca maxitems for participants of an event to 100
+- changed version to stable 1.7.1
+- changed dependency on typo3 to 6.0.0-0.0.0
+
 14-08-18 Stefan Precht <sprecht@gmx.de>
 - Added seodesc attribute to a course.
 - now this is used for rendering the meta description

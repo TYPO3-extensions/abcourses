@@ -15,21 +15,21 @@ $EM_CONF[$_EXTKEY] = array (
 	'description' => 'An extension for dealing with seminars and appointments with extensive opportunities for advertising your appointments and for subscribing to them. Subscriptions can be stored as tt_address. Offers different hooks.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.7.0',
+	'version' => '1.7.1',
 	'dependencies' => 'cms,tt_address',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
 	'module' => '',
-	'state' => 'beta',
+	'state' => 'stable',
 	'uploadfolder' => 1,
 	'createDirs' => 'uploads/tx_abcourses/rte/',
 	'modify_tables' => 'tt_address, tt_content',
 	'clearcacheonload' => 1,
 	'lockType' => '',
 	'author' => 'Andreas Behrens and Stefan Precht',
-	'author_email' => 'Andreas Behrens <behrens@b-networks.de>, Stefan Precht <info@stefanprecht.de>',
-	'author_company' => '@b-networks, Precht IT Beratung & Softwareentwicklung, SYMPLASSON GmbH, Tallence GmbH',
+	'author_email' => 'Stefan Precht <info@stefanprecht.de>, Andreas Behrens <behrens@b-networks.de>',
+	'author_company' => 'Precht IT Beratung & Softwareentwicklung, @b-networks, SYMPLASSON GmbH, Tallence GmbH',
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
 	'constraints' => 
@@ -37,8 +37,8 @@ $EM_CONF[$_EXTKEY] = array (
 		'depends' => 
 		array (
             'php' => '5.3.7-5.5.99',
-            'typo3' => '6.2.4',
-			'tt_address' => '2.3.5',
+            'typo3' => '6.0.0-0.0.0',
+			'tt_address' => '2.3.5-0.0.0',
 		),
 		'conflicts' => 
 		array (

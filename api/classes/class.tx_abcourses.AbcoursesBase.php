@@ -26,7 +26,7 @@
  * Base class for abcourses content objects.
  *
  */
-class cAbcoursesBase extends tslib_pibase {
+class cAbcoursesBase extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin {
 	var $arrData = '';
 	var $fError = 0;
 

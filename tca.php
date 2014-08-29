@@ -696,6 +696,7 @@ $TCA["tx_abcourses_event"] = Array (
                 				"allowed" => "tt_address",
                                 "size" => 5,        ## WOP:[tables][4][fields][8][conf_relations_selsize]
                                 "minitems" => 0,
+                                "maxitems" => 100,
                                 "MM" => "tx_abcourses_event_participants_mm",        ## WOP:[tables][4][fields][8][conf_relations_mm]
                                 "wizards" => Array(
                                         "_PADDING" => 2,

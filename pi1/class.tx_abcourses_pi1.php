@@ -35,7 +35,7 @@ require_once(t3lib_extMgm::extPath('abcourses') . 'api/classes/class.tx_abcourse
 require_once(t3lib_extMgm::extPath('abcourses') . 'api/util/class.tx_abcourses.utils.php');
 
 
-class tx_abcourses_pi1 extends tslib_pibase
+class tx_abcourses_pi1 extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 {
     var $prefixId = 'tx_abcourses_pi1'; // Same as class name
     var $scriptRelPath = 'pi1/class.tx_abcourses_pi1.php'; // Path to this script relative to the extension dir.
@@ -471,17 +471,16 @@ class tx_abcourses_pi1 extends tslib_pibase
         //load the objectlayer
         $objLoader =& $GLOBALS['T3_VAR']['abcourses']['cLoader'];
 
-        //get the categorys object. this should be already initialised.
-        $objCategorys =& $objLoader->get_objCategorys();
+        //get the categories object. this should be already initialised.
+        $objCategories =& $objLoader->get_objCategorys();
 
-        $MA = array();
         $renderedCategorys = "";
 
-        if (!is_array($objCategorys->get_arrData())) {
+        if (!is_array($objCategories->get_arrData())) {
             return $this->templateNoData;
         }
 
-        foreach ($objCategorys->get_arrData() as $categoryId => $Category) {
+        foreach ($objCategories->get_arrData() as $categoryId => $Category) {
             //render the view for the current category record
             $Category->load_arrCourses($objLoader, $lConf['nextevents'], $this->INITEVENTS);
             $renderedCategorys .= $Category->printme($lTemplateCategory, $this, $lConf);
@@ -701,22 +700,12 @@ class tx_abcourses_pi1 extends tslib_pibase
         $lTrainertemplateRow = $this->cObj->getSubpart($lTrainertemplate, '###ROWTRAINER###'); // Subpart extrahieren
         $lNoTrainertemplate = $this->cObj->getSubpart($lTemplate, '###NOTRAINER###'); // Subpart extrahieren
 
-        $lParticipantstemplate = $this->cObj->getSubpart($lTemplate, '###PARTICIPANTS###'); // Subpart extrahieren
-        $lParticipantstemplate = $this->cObj->getSubpart($lTemplate, '###NOPARTICIPANTS###'); // Subpart extrahieren
-
-        $lEventTrainertemplate = $this->cObj->getSubpart($lEventtemplate, '###EVENTTRAINER###'); // Subpart extrahieren
-        $lEventTrainertemplateRow = $this->cObj->getSubpart($lTrainertemplate, '###EVENTROWTRAINER###'); // Subpart extrahieren
-        $lEventNoTrainertemplate = $this->cObj->getSubpart($lEventtemplate, '###EVENTNOTRAINER###'); // Subpart extrahieren
-
-        $lPagetemplate = $this->cObj->getSubpart($lEventtemplate, '###PAGE###'); // Subpart extrahieren
+        $lPagetemplate = $this->cObj->getSubpart($lTemplate, '###PAGE###'); // Subpart extrahieren
         $lPagetemplateRow = $this->cObj->getSubpart($lPagetemplate, '###ROWPAGE###'); // Subpart extrahieren
-        $lNoPagetemplate = $this->cObj->getSubpart($lEventtemplate, '###NOPAGE###'); // Subpart extrahieren
+        $lNoPagetemplate = $this->cObj->getSubpart($lPagetemplate, '###NOPAGE###'); // Subpart extrahieren
 
         $templateTeachingaids = $this->cObj->getSubpart($lTemplate, '###TEACHINGAIDS###');
         $templateFiles = $this->cObj->getSubpart($lTemplate, '###FILES###');
-
-
-        $sRet = ''; // Variable für Ausgabe
 
         //Übergabeparameter prüfen
         if (!isset($this->piVars['courseId'])) {
@@ -882,12 +871,10 @@ class tx_abcourses_pi1 extends tslib_pibase
         //TODO Change this to the oop approach
 
         //Filter für Termine setzen. Termin darf $ago Tage zurückliegen.
-        $datefilter = '';
         $ago = intval($lConf['showEventsAgo']);
         $time = time() - ($ago * 24 * 3600);
         $datefilter = ' AND tx_abcourses_event.coursestart >= ' . mktime(0, 0, 0, date('m', $time), date('d', $time), date('Y', $time));
 
-        $rsEvents = '';
         $rsEvents = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query(
             'tx_abcourses_event.*',
             'tx_abcourses_event',
@@ -2219,16 +2206,17 @@ class tx_abcourses_pi1 extends tslib_pibase
 
         $sFormdata = '';
 
+        $mailLabels = $this->conf['subscribe.']['mailLabels'];
         foreach ($MA as $key => $value) {
             $label = strtolower(trim($key, "#"));
-
-            $mailLabels = $this->conf['subscribe.']['mailLabels'];
-
-            $pos = strpos($mailLabels, $label);
-            if (!($pos === false) && $value) {
-                $sFormdata .= $this->pi_getLL($label, ucfirst($label)) . ': ';
-                //Next line is important to avoid Mailform injection
-                $sFormdata .= wordwrap(rawurldecode($value)) . "\n";
+            $label = trim($label, " ");
+            if (!empty($label)) {
+                $pos = strpos($mailLabels, $label);
+                if (!($pos === false) && $value) {
+                    $sFormdata .= $this->pi_getLL($label, ucfirst($label)) . ': ';
+                    //next line is important to avoid mailform injection
+                    $sFormdata .= wordwrap(rawurldecode($value)) . "\n";
+                }
             }
         }
 
